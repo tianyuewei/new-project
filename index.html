@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="https://use.typekit.net/ien0aty.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ien0aty.css" />
     <style>
+      body {
+        background-color: gray;
+      }
       .container {
         width: 1200px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 200px 100px 100px 100px 100px auto;
-      }
-
-      body {
+        grid-template-rows: 190px 100px 100px 100px 100px auto;
         padding: 60px;
+        background-color: white;
       }
+      
       /* typeface */
       @font-face {
         font-family: "WhyteInkrapBold";
@@ -58,6 +60,7 @@
         font-weight: 700;
         font-style: normal;
         font-size: 18pt;
+        letter-spacing: 2.3px;
         margin-bottom: 10px;
       }
 
@@ -65,7 +68,7 @@
         font-family: WhyteMedium, sans-serif;
         font-weight: 700;
         font-style: normal;
-        font-size: 15pt;
+        font-size: 14pt;
       }
 
       p {
@@ -73,7 +76,7 @@
         font-weight: normal;
         font-style: normal;
         font-size: 14pt;
-        line-height: 1.1;
+        line-height: 1.25;
       }
 
       time {
@@ -82,6 +85,15 @@
         font-style: normal;
         font-size: 14pt;
         line-height: 0.55;
+        padding-top: 3px;
+      }
+
+      a {
+        color: black;
+      }
+
+      a:hover {
+        color: gray;
       }
 
       /* list style */
@@ -93,11 +105,11 @@
         font-weight: normal;
         font-style: normal;
         font-size: 14pt;
-        line-height: 1.15;
+        line-height: 1.25;
       }
 
       li {
-        line-height: 1.15;
+        line-height: 1.25;
       }
 
       ul > li:before {
@@ -125,6 +137,8 @@
       /* work location style */
       .location {
         font-size: 10pt;
+        line-height:1.5;
+        margin-bottom: 5px;
       }
 
       .title {
@@ -133,7 +147,7 @@
         position: relative;
         /*         border: 1px solid pink; */
       }
-      
+
       /* slash between times */
       .slash {
         font-size: 10pt;
@@ -153,7 +167,7 @@
       .Languages {
         grid-column: 1/3;
         grid-row: 4/5;
-        margin-top: 10px;
+        margin-top: 25px;
         /*         border: 1px solid blue; */
       }
 
@@ -193,13 +207,14 @@
       .awards {
         grid-column: 4/9;
         grid-row: 4/5;
-        margin-top: -10px;
+        margin-top: -25px;
       }
 
       /* experiences */
       .experiences {
         grid-column: 4/9;
         grid-row: 6/9;
+        margin-top: -10px;
         display: grid;
         grid-template-columns: 0.5fr 3fr;
         grid-template-rows: 10px auto auto auto auto;
@@ -214,38 +229,44 @@
 
       .exp_content2 {
         grid-row: 3/4;
-        /*         border: 1px solid yellow; */
       }
 
       .exp_content3 {
         grid-row: 4/5;
-        /*         border: 1px solid blue; */
       }
 
       .exp_content4 {
         grid-row: 5/6;
-        /*         border: 1px solid purple;     */
       }
 
       .allexp {
-        margin-right: 60px;
         margin-top: 30px;
+      }
+      
+      /* see border */
+      .test {
+        border: 1px solid purple;
       }
     </style>
   </head>
 
   <body>
     <main class="container">
+  
+      <!--       Headder -->
       <section class="title">
         <h1>Tianyue Wei</h1>
         <p>
-          https://www.tianyuewdesign.com<br />
+          <a href="https://www.tianyuewdesign.com"
+            >https://www.tianyuewdesign.com</a
+          ><br />
           lwei01@mica.edu<br />
           (651)-703-4464<br />
           1714 Park Ave. #408, Baltimore, MD 21217
         </p>
       </section>
-
+      
+      <!--       Skills on the left -->
       <section class="skills">
         <h2>Skills</h2>
         <ul class="nodash">
@@ -259,6 +280,7 @@
         </ul>
       </section>
 
+      <!--       Languages on the left -->
       <section class="Languages">
         <h2>Languages</h2>
         <p>
@@ -271,6 +293,7 @@
         </p>
       </section>
 
+      <!--       Education -->
       <section class="education twocolumn">
         <h2 class="sectiontitle">Education</h2>
 
@@ -291,9 +314,10 @@
         </p>
       </section>
 
+      <!--       Awards section -->
       <section class="awards twocolumn">
         <h2 class="sectiontitle">Awards and Exhibition</h2>
-
+        <!--       time -->
         <ul class="nodash leftcontent">
           <time>
             <li>2018</li>
@@ -303,18 +327,21 @@
             <li>2020</li>
           </time>
         </ul>
-
+        <!--       content list -->
         <ul class="nodash rightcontent">
           <li>First Year Experience Exhibition</li>
           <li>Presidential Scholarship, MICA</li>
           <li>Creative Vision Award, MICA</li>
+          <li>MICA Weekend Exhibition</li>
           <li>New Normal Exhibition</li>
         </ul>
       </section>
 
+      <!--       Experiences section -->
       <section class="experiences">
         <h2 class="sectiontitle">Experiences</h2>
 
+        <!--       time1 -->
         <time class="leftcontent exp_content1"
           >2019<br />
           <div class="smalltime">July</div>
@@ -325,21 +352,24 @@
           <div class="smalltime">July</div>
         </time>
 
+        <!--       time2 -->
         <time class="leftcontent exp_content2 allexp"
           >2021<br />
           <div class="smalltime">June</div>
         </time>
 
+        <!--       time3 -->
         <time class="leftcontent exp_content3 allexp"
           >2021<br />
           <div class="smalltime">July</div>
           <br />
-          <div class = "slash">/</div>
+          <div class="slash">/</div>
           <br />
           2021<br />
           <div class="smalltime">October</div>
         </time>
 
+        <!--       time4 -->
         <time class="leftcontent exp_content4 allexp"
           >2021<br />
           <div class="smalltime">July</div>
@@ -350,16 +380,18 @@
           <div class="smalltime">August</div>
         </time>
 
+        <!--       Content1 -->
         <div class="exp_content1 rightcontent">
           <h3 class="workTitle">Book design for Chen Yi Xin memoirs</h3>
           <p class="location">Freelance</p>
           <ul class="workContent">
-            <li>Gathers and orgamize information for the book</li>
-            <li>Edit texts and assist in the writing</li>
-            <li>Designed covers and book layout</li>
+            <li>Gathers and orgamize information for the book.</li>
+            <li>Edit texts and assist in the writing.</li>
+            <li>Designed covers and book layout.</li>
           </ul>
         </div>
 
+        <!--       Content2 -->
         <div class="exp_content2 rightcontent allexp">
           <h3 class="workTitle">Wix Playground Academy Student</h3>
           <p class="location">Wix.com</p>
@@ -372,34 +404,36 @@
             <li>Designed a high-level personal portfolio.</li>
             <li>
               Reinvented their existing personal portfolio into an online
-              presence that uniquely sets themselves apart
+              presence that uniquely sets themselves apart.
             </li>
           </ul>
         </div>
 
+        <!--       Content3 -->
         <div class="exp_content3 rightcontent allexp">
           <h3 class="workTitle">Creative Assistance</h3>
           <p class="location">House of Roses N the Dark</p>
           <ul>
             <li>
               Collaborate with designers and team members to implement creative
-              direction
+              direction on publications.
             </li>
-            <li>Design website layout</li>
-            <li>Interacting with authors and artists, suppliers, and media</li>
+            <li>Design website layout.</li>
+            <li>Interacting with authors and artists, suppliers, and media.</li>
             <li>
-              Assistance on design of art features, invites, advertisements
+              Assistance on design of art features, invites and advertisements.
             </li>
           </ul>
         </div>
 
+        <!--       Content4 -->
         <div class="exp_content4 rightcontent allexp">
           <h3 class="workTitle">Graphic Design Internship</h3>
           <p class="location">TN Marketing</p>
           <ul>
-            <li>Assist designers and team members on design projects</li>
-            <li>Design commercial materials</li>
-            <li>Design logos and brand identity for new brand</li>
+            <li>Assist designers and team members on design projects.</li>
+            <li>Design commercial materials.</li>
+            <li>Design logos and brand identity for new brand.</li>
           </ul>
         </div>
       </section>
